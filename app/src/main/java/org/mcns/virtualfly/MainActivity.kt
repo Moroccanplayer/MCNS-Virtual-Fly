@@ -163,7 +163,7 @@ class MainActivity : Activity() {
         val scroll = ScrollView(this).apply {
             isFillViewport = true
             setBackgroundColor(Color.rgb(8, 15, 24))
-            addView(content, ScrollView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
+            addView(content, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
         }
         pages.add(scroll)
         pageHost.addView(scroll, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
@@ -539,8 +539,8 @@ This button is a status/help panel, not a live connection.""")
             })
         }
         val labels = row()
-        labels.addView(TextView(this).apply { text = minLabel; textSize = 10f; setTextColor(Color.LTGRAY) }, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
-        labels.addView(TextView(this).apply { text = maxLabel; textSize = 10f; gravity = Gravity.RIGHT; setTextColor(Color.LTGRAY) }, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+        labels.addView(TextView(this).apply { this.text = minLabel; textSize = 10f; setTextColor(Color.LTGRAY) }, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+        labels.addView(TextView(this).apply { this.text = maxLabel; textSize = 10f; gravity = Gravity.RIGHT; setTextColor(Color.LTGRAY) }, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
         outer.addView(text); outer.addView(seek); outer.addView(labels)
         return outer
     }
