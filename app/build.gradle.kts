@@ -9,9 +9,9 @@ android {
     defaultConfig {
         applicationId = "org.mcns.virtualfly"
         minSdk = 23
-        targetSdk = 28
-        versionCode = 2
-        versionName = "0.2"
+        targetSdk = 35
+        versionCode = 3
+        versionName = "0.3"
     }
     buildTypes { release { isMinifyEnabled = false } }
     compileOptions {
